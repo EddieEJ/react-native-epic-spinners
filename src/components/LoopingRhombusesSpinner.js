@@ -67,7 +67,8 @@ export function LoopingRhombusesSpinner(props: EpicSpinnersProps): Element<any> 
         Animated.timing(animated, {
           toValue: 2,
           duration: animationDuration,
-          easing: Easing.linear
+          easing: Easing.linear,
+          useNativeDriver: true
         })
       );
     };
