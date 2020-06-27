@@ -64,7 +64,8 @@ export function HalfCircleSpinner(props: EpicSpinnersProps): Element<any> {
         Animated.timing(firstInnerCircle, {
           toValue: 1,
           duration: animationDuration,
-          easing: Easing.linear
+          easing: Easing.linear,
+          useNativeDriver: true
         })
       ),
       Animated.loop(
@@ -72,12 +73,14 @@ export function HalfCircleSpinner(props: EpicSpinnersProps): Element<any> {
           Animated.timing(secondInnerCircle, {
             toValue: 1,
             duration: animationDuration,
-            easing: Easing.quad
+            easing: Easing.quad,
+            useNativeDriver: true
           }),
           Animated.timing(secondInnerCircle, {
             toValue: 0,
             duration: animationDuration,
-            easing: Easing.linear
+            easing: Easing.linear,
+            useNativeDriver: true
           })
         ])
       )
