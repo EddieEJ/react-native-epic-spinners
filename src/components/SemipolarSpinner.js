@@ -87,7 +87,8 @@ export function SemipolarSpinner(props: EpicSpinnersProps): Element<any> {
       return Animated.loop(
         Animated.timing(animated, {
           toValue: 2,
-          duration: animationDuration
+          duration: animationDuration,
+          useNativeDriver: true
         })
       );
     };
